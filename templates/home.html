@@ -2,5 +2,12 @@
 
 
     {% block content %}
-        站点：{{ info_dict.site }} 内容：{{ info_dict.content }}
+        站点：{{ info_dict.site }}
+        内容：
+        <div>
+        {% autoescape off %}
+            {{ info_dict.content }}
+        {% endautoescape %}
+
+        </div>
     {% endblock %}
