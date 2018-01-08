@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^$', touch_views.index),
     url(r'^add/(\d+)/(\d+)/$', touch_views.add, name='add'),
     url(r'^admin/', admin.site.urls),
-    url(r'^ueditor/', include('DjangoUeditor.urls')),
-    url(r'^static/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.STATIC_ROOT}),
+    url(r'^ueditor/', include('DjangoUeditor.urls'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
