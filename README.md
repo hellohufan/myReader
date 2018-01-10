@@ -1,0 +1,3 @@
+# myReader
+
+django project
